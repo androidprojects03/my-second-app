@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import MetaverseOrb from './MetaverseOrb';
 
 const orbitMembers = ['Ari', 'Mika', 'Sol', 'Jun'];
 const worldCards = ['Neon Plaza', 'Sky Lounge', 'Creator Dome'];
@@ -84,6 +85,13 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: 'easeOut', delay: 0.1 }}
           className="rounded-2xl border border-gray-700 bg-gray-900 p-6 shadow-xl shadow-violet-500/10 md:p-8"
         >
+          <motion.div
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
+            className="mb-8"
+          >
+            <MetaverseOrb />
+          </motion.div>
           <div className="mb-6 flex items-center justify-between gap-4">
             <div>
               <p className="text-sm font-normal text-gray-400">Active world</p>

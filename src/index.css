@@ -17,6 +17,11 @@ html {
 body {
   margin: 0;
   background: #030712;
+  perspective: 1200px;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 h1,
