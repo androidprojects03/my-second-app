@@ -18,6 +18,7 @@ body {
   margin: 0;
   background: #030712;
   perspective: 1200px;
+  overflow-x: hidden;
 }
 
 * {

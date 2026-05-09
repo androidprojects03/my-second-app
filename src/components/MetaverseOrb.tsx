@@ -21,7 +21,7 @@ const ringVariants = {
 
 export default function MetaverseOrb() {
   return (
-    <div className="relative mx-auto flex aspect-square w-full max-w-[26rem] items-center justify-center">
+    <div className="relative mx-auto flex aspect-square w-full max-w-[26rem] items-center justify-center [transform-style:preserve-3d]">
       <motion.div
         animate={{ rotate: 360 }}
         transition={{ duration: 28, repeat: Infinity, ease: 'linear' }}
@@ -40,11 +40,7 @@ export default function MetaverseOrb() {
         className="absolute inset-12 rounded-full border border-cyan-400/40"
       />
       <motion.div
-        animate={{
-          y: [0, -10, 0],
-          rotateX: [14, 0, 14],
-          rotateY: [-10, 10, -10],
-        }}
+        animate={{ y: [0, -10, 0], rotateX: [14, 0, 14], rotateY: [-10, 10, -10] }}
         transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
         className="relative flex h-64 w-64 items-center justify-center rounded-full border border-gray-700 bg-gray-900 shadow-xl shadow-violet-500/10 [transform-style:preserve-3d]"
       >
@@ -52,6 +48,11 @@ export default function MetaverseOrb() {
           animate={{ scale: [1, 1.08, 1] }}
           transition={{ duration: 3.2, repeat: Infinity, ease: 'easeInOut' }}
           className="absolute inset-6 rounded-full bg-violet-600/20 blur-2xl"
+        />
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'linear' }}
+          className="absolute inset-3 rounded-full border border-gray-700/70"
         />
         <div className="relative flex h-40 w-40 items-center justify-center rounded-full border border-gray-700 bg-gray-950 shadow-xl shadow-violet-500/10">
           <motion.span
